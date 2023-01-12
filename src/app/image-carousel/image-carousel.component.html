@@ -1,8 +1,7 @@
-<div>
-  <h2>Carousel</h2>
-  <div className="slider">
-    <div className="left-arrow" (click)="PreviousImage()">⬅</div>
-    <div className="right-arrow" (click)="NextImage()">⮕</div>
+<div [ngClass]="'carousel'">
+  <div [ngClass]="'left-arrow'" (click)="PreviousImage()">⬅</div>
+  <div [ngClass]="'right-arrow'" (click)="NextImage()">⮕</div>
+  <div [ngClass]="'currentImage'">
     <app-image [imageUrl]="CurrentImage()"></app-image>
   </div>
 </div>
