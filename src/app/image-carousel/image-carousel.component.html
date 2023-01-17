@@ -1,7 +1,11 @@
-<div [ngClass]="'carousel'">
-  <div [ngClass]="'left-arrow'" (click)="PreviousImage()">⬅</div>
-  <div [ngClass]="'right-arrow'" (click)="NextImage()">⮕</div>
-  <div [ngClass]="'currentImage'">
+<div [ngClass]="'row'">
+  <div class="col-1">
+    <button [ngClass]="'btn btn-default'" (click)="PreviousImage()"><=</button>
+  </div>
+  <div [ngClass]="'col-10'">
     <app-image [imageUrl]="CurrentImage()"></app-image>
+  </div>
+  <div class="col-1">
+    <button [ngClass]="'btn btn-default'" (click)="NextImage()">=></button>
   </div>
 </div>
